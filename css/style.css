@@ -1,0 +1,513 @@
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    color: #fff;
+    z-index: 999;
+}
+
+.header .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    align-items: center;
+    height: 150px;
+
+}
+
+.header .header_wrap .gnb>ul {
+    display: flex;
+    gap: 60px;
+    font-size: 24px;
+    font-weight: 500;
+
+
+}
+
+.header .header_wrap .icon {
+    display: flex;
+    font-size: 24px;
+    gap: 30px;
+    background: rgb(221, 221, 221, 0.1);
+}
+
+
+
+
+
+
+.mainvisual::before {
+    content: "";
+    position: absolute;
+    height: 750px;
+    width: 80%;
+    background: #007aff;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.mainvisual::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    background-color: #e9ebf1;
+    width: 2000px;
+    height: 300px;
+    z-index: -2;
+    border-radius: 0 0 0 30px;
+}
+
+
+
+.itm {
+
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.itm .img_box {
+    border-radius: 20px 20px 70px 20px;
+    overflow: hidden;
+    margin: 0 0 0 50px;
+}
+
+.itm .text_box {
+
+    right: 0;
+    margin: 0 0 0 50px;
+}
+
+.itm .text_box strong {
+    display: block;
+    font-size: 50px;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+    color: #fff;
+    font-weight: 700;
+
+}
+
+.itm .text_box span {
+    font-size: 24px;
+    color: #fff;
+}
+
+.mainservice {
+    position: relative;
+}
+
+.mainservice::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50px;
+    bottom: 0px;
+    background-color: #e9ebf1;
+    width: 2000px;
+    height: 100%;
+    z-index: -2;
+    border-radius: 0 0 0 30px;
+}
+
+
+
+
+.mainservice .service_wrap {
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    padding: 70px 15px;
+
+}
+
+.mainservice .title {
+    width: 400px;
+}
+
+.mainservice .title h3 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.mainservice .title h3::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: -9px;
+    background: #ffd325;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    z-index: -1;
+}
+
+.mainservice .title p {
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+}
+
+.mainservice .sv_tap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px 0 0;
+    gap: 60px;
+
+
+
+}
+
+
+
+.mainservice .sv_tap .middel .tap_menu li {
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 130px;
+    padding: 12px 10px;
+    text-align: center;
+    margin: 0 0 5px 0;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mainservice .sv_tap .middel .tap_menu li.on {
+    background: #0d1744;
+    color: #fff;
+}
+
+.mainservice .sv_tap .middel .tap_menu li:hover {
+    background: #0d1744;
+    color: #fff;
+}
+
+.mainservice .right .tap_detail ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.mainservice .right .tap_detail ul>li {
+    text-align: center;
+
+}
+
+.mainservice .right .tap_detail ul>li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    width: 120px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 1px 1px 1px #ddd;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #0d1744;
+
+
+}
+
+.mainservice .right .tap_detail ul>li a figure {
+    margin: 0 0 15px 0;
+    transition: 0.5s;
+
+}
+
+.mainservice .right .tap_detail ul>li a:hover figure {
+    transform: translate(0, -15%);
+}
+
+
+
+.mainservice .right .tap_detail>li {
+    height: 0;
+    overflow: hidden;
+}
+
+.mainservice .right .tap_detail>li.on {
+    height: auto;
+}
+
+
+.mainnotice {
+    padding: 100px;
+}
+
+.mainnotice .notice_wrap {
+    display: flex;
+    gap: 30px;
+}
+
+.mainnotice .title {
+    min-width: 400px;
+
+}
+
+.mainnotice .title h2 {
+
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.mainnotice .title p {
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin: 0 0 40px 0;
+}
+
+.mainnotice .nt_tap_menu {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+
+
+
+}
+
+.mainnotice .nt_tap_menu>li {
+
+    border: 1px solid #ddd;
+    padding: 15px 18px;
+    border-radius: 30px;
+}
+
+
+
+.mainnotice .nt_tap_detail>li {
+
+    height: 0;
+    overflow: hidden;
+}
+
+.mainnotice .nt_tap_detail>li.on {
+    height: auto;
+}
+
+.mainnotice .nt_tap_detail>li>ul>li {}
+
+.mainnotice .nt_tap_detail>li a {
+    display: block;
+    height: 400px;
+    width: 350px;
+    border: 1px solid #bac7d8;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+
+
+.mainnotice .nt_tap_detail>li a:hover {
+    background: #f5f9fd;
+}
+
+.mainnotice .nt_tap_detail>li a:hover .top .ep {
+    color: orange;
+
+    background: transparent;
+}
+
+
+
+.mainnotice .nt_tap_detail>li a:hover .top .ep::before {
+    background: transparent;
+    border: 1px solid orange;
+}
+
+
+
+
+.mainnotice .text_box .top .ep::before {
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: orange;
+    z-index: -1;
+}
+
+
+
+
+/* 01 */
+.mainnotice .nt_tap_detail>li a:hover .top .bd {
+    color: #755fff;
+
+    background: transparent;
+}
+
+.mainnotice .text_box .top .bd::before {
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #755fff;
+    z-index: -1;
+}
+
+.mainnotice .nt_tap_detail>li a:hover .top .bd::before {
+    background: transparent;
+    border: 1px solid #755fff;
+}
+
+/* 02 */
+.mainnotice .nt_tap_detail>li a:hover .top .nt {
+    color: #0091dc;
+
+    background: transparent;
+}
+
+.mainnotice .text_box .top .nt::before {
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #0091dc;
+    z-index: -1;
+}
+
+.mainnotice .nt_tap_detail>li a:hover .top .nt::before {
+    background: transparent;
+    border: 1px solid #0091dc;
+}
+
+/* 03 */
+
+.mainnotice .nt_tap_detail>li a:hover .top .jh {
+    color: #0091dc;
+
+    background: transparent;
+}
+
+.mainnotice .text_box .top .jh::before {
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fb3b4c;
+    z-index: -1;
+}
+
+.mainnotice .nt_tap_detail>li a:hover .top .jh::before {
+    background: transparent;
+    border: 1px solid #fb3b4c;
+}
+
+
+
+
+
+
+
+
+
+
+.mainnotice a .text_box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    padding: 40px 50px
+}
+
+.mainnotice .text_box .top>span {
+    position: relative;
+    display: block;
+    color: #fff;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+
+
+
+
+
+.mainnotice .text_box .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainnotice .text_box .top .date span {
+    display: block;
+    text-align: center;
+}
+
+.mainnotice .text_box .top .date .day {
+    color: #555;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.mainnotice .text_box .top .date .year {
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mainnotice .mid strong {
+    display: block;
+    line-height: 1.4;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.mainnotice .mid p {
+    font-weight: 500;
+    color: #999;
+    line-height: 1.2;
+}
+
+.mainnotice .bottom {
+    font-weight: 500;
+}
