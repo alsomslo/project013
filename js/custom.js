@@ -18,17 +18,33 @@ $(function () {
 
 
 
+
     const swiper = new Swiper(".nt_tap_detail>li", {
-        slidesPerView: 3,
+        slidesPerView: 4,
         centeredSlides: false,
         loop: true,
-        spaceBetween: -3000,
+        spaceBetween: -10,
         grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
     });
+
+    $('.ns_slide01').slick({
+        arrows: false,
+
+    })
+
+    $('.ns_slide02').slick({
+        arrows: false,
+
+    })
+    $('.ns_slide03').slick({
+        arrows: false,
+
+    })
+
 
 
 

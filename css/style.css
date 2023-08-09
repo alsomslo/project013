@@ -33,9 +33,7 @@ body {
 }
 
 
-
-
-
+/* 메인슬라이드 */
 
 .mainvisual::before {
     content: "";
@@ -62,8 +60,7 @@ body {
 }
 
 
-
-.itm {
+.mainvisual .itm {
 
     display: flex;
     align-items: center;
@@ -72,24 +69,24 @@ body {
 
 }
 
-.swiper-slide {
+.mainvisual .swiper-slide {
     background-position: center;
     background-size: cover;
 }
 
-.itm .img_box {
+.mainvisual .itm .img_box {
     border-radius: 20px 20px 70px 20px;
     overflow: hidden;
     margin: 0 0 0 50px;
 }
 
-.itm .text_box {
+.mainvisual .itm .text_box {
 
     right: 0;
     margin: 0 0 0 50px;
 }
 
-.itm .text_box strong {
+.mainvisual .itm .text_box strong {
     display: block;
     font-size: 50px;
     margin: 0 0 30px 0;
@@ -99,10 +96,13 @@ body {
 
 }
 
-.itm .text_box span {
+.mainvisual .itm .text_box span {
     font-size: 24px;
     color: #fff;
 }
+
+
+/* 주요서비스 */
 
 .mainservice {
     position: relative;
@@ -120,8 +120,6 @@ body {
     z-index: -2;
     border-radius: 0 0 0 30px;
 }
-
-
 
 
 .mainservice .service_wrap {
@@ -172,11 +170,7 @@ body {
     padding: 0 50px 0 0;
     gap: 60px;
 
-
-
 }
-
-
 
 .mainservice .sv_tap .middel .tap_menu li {
     background: #fff;
@@ -238,8 +232,6 @@ body {
     transform: translate(0, -15%);
 }
 
-
-
 .mainservice .right .tap_detail>li {
     height: 0;
     overflow: hidden;
@@ -249,6 +241,7 @@ body {
     height: auto;
 }
 
+/* 공지사항 */
 
 .mainnotice {
     padding: 100px;
@@ -256,12 +249,10 @@ body {
 
 .mainnotice .notice_wrap {
     display: flex;
-    gap: 30px;
 }
 
 .mainnotice .title {
     min-width: 400px;
-
 }
 
 .mainnotice .title h2 {
@@ -283,9 +274,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     gap: 5px;
-
-
-
 }
 
 .mainnotice .nt_tap_menu>li {
@@ -293,12 +281,24 @@ body {
     border: 1px solid #ddd;
     padding: 15px 18px;
     border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.mainnotice .nt_tap_menu>li:hover {
+    background: #0d1744;
+    color: #fff;
+    border: 1px solid transparent;
+
+}
+
+.mainnotice .right {
+    min-width: 1600px;
 }
 
 
 
 .mainnotice .nt_tap_detail>li {
-
     height: 0;
     overflow: hidden;
 }
@@ -318,8 +318,6 @@ body {
     transition: 0.3s;
 }
 
-
-
 .mainnotice .nt_tap_detail>li a:hover {
     background: #f5f9fd;
 }
@@ -330,15 +328,10 @@ body {
     background: transparent;
 }
 
-
-
 .mainnotice .nt_tap_detail>li a:hover .top .ep::before {
     background: transparent;
     border: 1px solid orange;
 }
-
-
-
 
 .mainnotice .text_box .top .ep::before {
 
@@ -354,8 +347,6 @@ body {
     background: orange;
     z-index: -1;
 }
-
-
 
 
 /* 01 */
@@ -441,14 +432,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
 .mainnotice a .text_box {
     display: flex;
     flex-direction: column;
@@ -464,10 +447,6 @@ body {
     transition: 0.5s;
     z-index: 1;
 }
-
-
-
-
 
 
 .mainnotice .text_box .top {
@@ -511,3 +490,86 @@ body {
 .mainnotice .bottom {
     font-weight: 500;
 }
+
+/* 메인뉴스 */
+
+.mainnews {
+    position: relative;
+    padding: 100px 0;
+}
+
+.mainnews .title h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 50px 0;
+}
+
+.mainnews .news_wrap {
+    position: relative;
+    display: flex;
+}
+
+.mainnews .news_wrap>* {
+    flex: 1;
+    overflow: hidden;
+}
+
+.mainnews .slide_wrap {
+    display: flex;
+}
+
+.mainnews .ns_slide01 {
+
+    width: 450px;
+}
+
+.mainnews .ns_slide02 {
+    position: absolute;
+    left: 20%;
+    top: 26%;
+    z-index: 190;
+}
+
+.mainnews .ns_slide02::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    height: 300px;
+    width: 500px;
+    background: #007aff;
+    z-index: 50;
+
+}
+
+.mainnews .ns_slide01 .itm .img_box {}
+
+.mainnews .ns_slide01 .itm .img_box img {
+    height: 430px;
+    width: 600px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* .mainnews .news_wrap .ns_slide03 {
+    position: absolute;
+    height: 600px;
+    top: -39%;
+    left: 35%;
+}
+
+.mainnews .news_wrap .ns_slide03 .itm {
+    position: absolute;
+    top: 50%;
+}
+
+.mainnews .news_wrap .ns_slide03::before {
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    background: #007aff;
+    top: 50%;
+
+    border-radius: 30px;
+    z-index: 1;
+} */
