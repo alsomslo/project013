@@ -29,21 +29,46 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+
     });
 
     $('.ns_slide01').slick({
         arrows: false,
+        fade: true,
+        asNavFor: '.ns_slide02',
 
     })
+
 
     $('.ns_slide02').slick({
         arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        focusOnSelect: true
 
     })
-    $('.ns_slide03').slick({
+
+    $('.event_slide').slick({
         arrows: false,
-
+        slidesToShow: 4,
+        slidesToScroll: 1,
     })
+
+
+    $('.mainevent .arrows .prev').on('click', function (e) {
+        $('.event_slide').slick('slickPrev')
+    });
+    $('.mainevent .arrows .next').on('click', function (e) {
+        $('.event_slide').slick('slickNext')
+    });
+
+    $('.mainnews .arrows .prev').on('click', function (e) {
+        $('.ns_slide01').slick('slickPrev')
+    });
+    $('.mainnews .arrows .next').on('click', function (e) {
+        $('.ns_slide01').slick('slickNext')
+    });
 
 
 
