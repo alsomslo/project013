@@ -19,18 +19,106 @@ $(function () {
 
 
 
-    const swiper = new Swiper(".nt_tap_detail>li", {
+
+
+    const noticeSlide01 = new Swiper(".notice_slide01", {
         slidesPerView: 4,
-        centeredSlides: false,
+        //centeredSlides: false,
+        //loop: true,
+        //spaceBetween: -10,
+        //grabCursor: true,
         loop: true,
-        spaceBetween: -10,
-        grabCursor: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
 
     });
+    $('.mainnotice .arrows .prev').on('click', function (e) {
+        noticeSlide01.slidePrev();
+    });
+    $('.mainnotice .arrows .next').on('click', function (e) {
+        noticeSlide01.slideNext();
+    });
+    const noticeSlide02 = new Swiper(".notice_slide02", {
+        slidesPerView: 4,
+        //centeredSlides: false,
+        //loop: true,
+        //spaceBetween: -10,
+        //grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
+    $('.mainnotice .arrows .prev').on('click', function (e) {
+        noticeSlide02.slidePrev();
+    });
+    $('.mainnotice .arrows .next').on('click', function (e) {
+        noticeSlide02.slideNext();
+    });
+    const noticeSlide03 = new Swiper(".notice_slide03", {
+        slidesPerView: 4,
+        //centeredSlides: false,
+        //loop: true,
+        //spaceBetween: -10,
+        //grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
+    $('.mainnotice .arrows .prev').on('click', function (e) {
+        noticeSlide03.slidePrev();
+    });
+    $('.mainnotice .arrows .next').on('click', function (e) {
+        noticeSlide03.slideNext();
+    });
+    const noticeSlide04 = new Swiper(".notice_slide04", {
+        slidesPerView: 4,
+        //centeredSlides: false,
+        //loop: true,
+        //spaceBetween: -10,
+        //grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
+    $('.mainnotice .arrows .prev').on('click', function (e) {
+        noticeSlide04.slidePrev();
+    });
+    $('.mainnotice .arrows .next').on('click', function (e) {
+        noticeSlide04.slideNext();
+    });
+    const noticeSlide05 = new Swiper(".notice_slide05", {
+        slidesPerView: 4,
+        //centeredSlides: false,
+        //loop: true,
+        //spaceBetween: -10,
+        //grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+    });
+    $('.mainnotice .arrows .prev').on('click', function (e) {
+        noticeSlide05.slidePrev();
+    });
+    $('.mainnotice .arrows .next').on('click', function (e) {
+        noticeSlide05.slideNext();
+    });
+
+
+
 
     $('.ns_slide01').slick({
         arrows: false,
@@ -54,6 +142,8 @@ $(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
     })
+
+
 
 
     $('.mainevent .arrows .prev').on('click', function (e) {
