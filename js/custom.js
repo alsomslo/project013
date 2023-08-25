@@ -1,5 +1,22 @@
 $(function () {
 
+
+    $('.menu').on('click', function () {
+        $('.gnb').addClass('on');
+
+    });
+    $('.gnb>ul>li>a').on('click', function (e) {
+        e.preventDefault();
+        $(this).next().stop().slideDown();
+        $(this).parent().siblings().find('.sub').stop().slideUp();
+    });
+
+    $(window).on('resize', function () {
+        $('.gnb .sub').removeAttr('style')
+    })
+
+
+
     const mainSlide = new Swiper('.mainslide', {
         loop: true,
         parallax: true,
@@ -22,7 +39,7 @@ $(function () {
 
 
     const noticeSlide01 = new Swiper(".notice_slide01", {
-        slidesPerView: 4,
+        slidesPerView: 1,
         //centeredSlides: false,
         //loop: true,
         //spaceBetween: -10,
@@ -32,6 +49,18 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: -10,
+                // centeredSlides: true,
+            },
+            350: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+
+            }
+        }
 
     });
     $('.mainnotice .arrows .prev').on('click', function (e) {
@@ -41,7 +70,7 @@ $(function () {
         noticeSlide01.slideNext();
     });
     const noticeSlide02 = new Swiper(".notice_slide02", {
-        slidesPerView: 4,
+        slidesPerView: 1,
         //centeredSlides: false,
         //loop: true,
         //spaceBetween: -10,
@@ -51,6 +80,18 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: -10,
+                // centeredSlides: true,
+            },
+            350: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+
+            }
+        }
 
     });
     $('.mainnotice .arrows .prev').on('click', function (e) {
@@ -60,7 +101,7 @@ $(function () {
         noticeSlide02.slideNext();
     });
     const noticeSlide03 = new Swiper(".notice_slide03", {
-        slidesPerView: 4,
+        slidesPerView: 1,
         //centeredSlides: false,
         //loop: true,
         //spaceBetween: -10,
@@ -70,7 +111,18 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: -10,
+                // centeredSlides: true,
+            },
+            350: {
+                slidesPerView: 2,
+                spaceBetween: 30,
 
+            }
+        }
     });
     $('.mainnotice .arrows .prev').on('click', function (e) {
         noticeSlide03.slidePrev();
@@ -79,7 +131,7 @@ $(function () {
         noticeSlide03.slideNext();
     });
     const noticeSlide04 = new Swiper(".notice_slide04", {
-        slidesPerView: 4,
+        slidesPerView: 1,
         //centeredSlides: false,
         //loop: true,
         //spaceBetween: -10,
@@ -89,6 +141,18 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: -10,
+                // centeredSlides: true,
+            },
+            350: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+
+            }
+        }
 
     });
     $('.mainnotice .arrows .prev').on('click', function (e) {
@@ -98,7 +162,7 @@ $(function () {
         noticeSlide04.slideNext();
     });
     const noticeSlide05 = new Swiper(".notice_slide05", {
-        slidesPerView: 4,
+        slidesPerView: 1,
         //centeredSlides: false,
         //loop: true,
         //spaceBetween: -10,
@@ -108,6 +172,18 @@ $(function () {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,
+                spaceBetween: -10,
+                // centeredSlides: true,
+            },
+            350: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+
+            }
+        }
 
     });
     $('.mainnotice .arrows .prev').on('click', function (e) {
@@ -141,6 +217,23 @@ $(function () {
         arrows: false,
         slidesToShow: 4,
         slidesToScroll: 1,
+        centerpadding: 10,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+
+            },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 2,
+                }
+
+            }
+        ]
     })
 
 
