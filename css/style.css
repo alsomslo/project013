@@ -25,6 +25,7 @@ body {
     padding: 0 50px;
     align-items: center;
     height: 150px;
+    margin: 0 auto;
 
 
 }
@@ -32,18 +33,19 @@ body {
 .header .gnb {
     margin: 0 0 0 -200px;
 
+
 }
 
 
 
 .header .gnb>ul {
     display: flex;
-
+    white-space: nowrap;
     font-size: 24px;
     height: 150px;
     line-height: 150px;
 
-    font-weight: 500;
+    font-weight: 700;
     z-index: 1000;
 }
 
@@ -60,16 +62,12 @@ body {
     visibility: visible;
 } */
 
-.header .gnb>ul>li:hover .sub,
 
-.header .gnb>ul>li:hover .intd,
-.header .gnb>ul>li:hover .sub::before {
-    visibility: visible;
-}
 
 
 .header .gnb>ul>li {
     padding: 0 30px;
+
 }
 
 .header .gnb>ul>li:hover {
@@ -88,6 +86,12 @@ body {
     line-height: 1;
     z-index: 1000;
     visibility: hidden;
+    pointer-events: none;
+}
+
+.header .gnb>ul>li:hover .intd {
+    visibility: visible;
+    pointer-events: none;
 }
 
 .header .gnb>ul>li .intd::before {
@@ -140,7 +144,7 @@ body {
     line-height: 1;
 
     font-size: 16px;
-    color: #000;
+    color: #555;
     display: flex;
     flex-wrap: wrap;
     z-index: -1;
@@ -165,6 +169,11 @@ body {
     visibility: hidden;
 }
 
+.header .gnb>ul>li:hover .sub,
+.header .gnb>ul>li:hover .sub::before {
+    visibility: visible;
+}
+
 .header .gnb>ul>li .sub>li {
     margin: 0 15px 15px 0;
 
@@ -182,8 +191,23 @@ body {
 }
 
 .header .gnb>ul>li .sub>li>ul>li {
+    position: relative;
+    font-weight: 500;
+    margin: 0 0 0 10px;
     padding: 0 0 0 10px;
     line-height: 32px;
+}
+
+.header .gnb>ul>li .sub>li>ul>li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background: #000;
 }
 
 
@@ -194,6 +218,10 @@ body {
     border-radius: 40px;
     gap: 30px;
     background: rgb(221, 221, 221, 0.1);
+}
+
+.header .menu {
+    display: none;
 }
 
 
@@ -265,6 +293,11 @@ body {
     color: #fff;
 }
 
+.mainvisual .swiper-button-next {
+    right: 0;
+}
+
+
 
 /* 주요서비스 */
 
@@ -297,13 +330,15 @@ body {
 }
 
 .mainservice .title {
-    width: 400px;
+    min-width: 410px;
+    width: 100%;
+    padding: 0 auto;
 }
 
 .mainservice .title h3 {
     position: relative;
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 900;
     margin: 0 0 20px 0;
 }
 
@@ -425,8 +460,8 @@ body {
 
 .mainnotice .title h2 {
 
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 70px;
+    font-weight: 900;
     margin: 0 0 20px 0;
 }
 
@@ -732,8 +767,8 @@ body {
 }
 
 .mainnews .title h2 {
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 70px;
+    font-weight: 900;
     margin: 0 0 50px 0;
 }
 
@@ -1123,7 +1158,6 @@ body {
 
     }
 
-
     .header {
         position: relative;
         color: #fff;
@@ -1131,12 +1165,20 @@ body {
 
     }
 
+    .header .logo {
+        position: sticky;
+        width: 120px;
+        z-index: 1;
+    }
+
     .header .header_wrap {
+        position: sticky;
         display: flex;
         justify-content: space-between;
         padding: 0 15px;
         align-items: center;
         height: 80px;
+        width: 100%;
 
     }
 
@@ -1145,10 +1187,11 @@ body {
 
     }
 
-    .header .header_wrap .gnb {
+    .header .header_wrap>.gnb {
         position: fixed;
-        inset: 0 auto 0 40%;
+        inset: 0 auto 0 0;
         width: 100%;
+
         background: #007aff;
         height: 100vh;
         color: #fff;
@@ -1160,13 +1203,13 @@ body {
 
     }
 
-    .header .header_wrap .gnb.on {
+    .header .header_wrap>.gnb.on {
         visibility: visible;
         opacity: 1;
-        inset: 0 auto 0 40%;
+        inset: 0 auto 0 0;
     }
 
-    .header .header_wrap .gnb.on::before {
+    /* .header .header_wrap .gnb.on::before {
         content: "";
         position: absolute;
         background: rgba(0, 0, 0, 0.4);
@@ -1175,7 +1218,8 @@ body {
         height: 100vh;
         width: 50%;
         z-index: -1;
-    }
+
+    } */
 
 
 
@@ -1194,7 +1238,7 @@ body {
         display: flex;
         flex-direction: column;
         margin: 100px 0 0 0;
-        font-size: 14px;
+        font-size: 16px;
         height: 50px;
         line-height: 50px;
 
@@ -1215,14 +1259,13 @@ body {
         visibility: visible;
     } */
 
-    .header .gnb>ul>li:hover .sub,
-    .header .gnb>ul>li:hover .intd {
-        /* visibility: visible; */
-        display: none;
-    }
+
+
+
 
 
     .header .gnb>ul>li {
+
         padding: 0 30px;
     }
 
@@ -1232,20 +1275,16 @@ body {
 
     .header .gnb>ul>li .intd {
         display: none;
-        position: absolute;
-        background: #007aff;
-        top: 150px;
-        left: 0;
-        width: 380px;
-        height: 500px;
-        border-radius: 0 50px 0 0;
-        color: #fff;
-        line-height: 1;
-        z-index: 1000;
+        pointer-events: none;
+    }
+
+
+    .header .gnb>ul>li:hover .intd {
         visibility: hidden;
     }
 
     .header .gnb>ul>li .intd::before {
+        display: none;
         content: "";
         position: absolute;
         height: 40px;
@@ -1259,6 +1298,7 @@ body {
 
     .header .gnb>ul>li .intd::after {
         content: "";
+        display: none;
         position: absolute;
         height: 20px;
         width: 20px;
@@ -1269,6 +1309,7 @@ body {
     }
 
     .header .gnb>ul>li .intd .text_box {
+        display: none;
         margin: 60px 0 0 130px;
     }
 
@@ -1285,64 +1326,71 @@ body {
     }
 
     .header .gnb>ul>li .sub {
-        position: static;
-
-        top: 0px;
+        position: absolute;
+        inset: 12% auto 0 30%;
+        /* top: 12%;
+        left: 40%; */
         height: auto;
-        max-width: 100%;
+        max-width: 0;
         width: 100%;
         margin: 0 0 0 0;
         line-height: 1;
 
-        font-size: 16px;
+        font-size: 14px;
         color: #000;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
-        z-index: -1;
-        visibility: hidden;
+        opacity: 1;
+
+        z-index: 1;
+        visibility: unset;
+        transition: 0.3s;
+
     }
 
+
+
     .header .gnb>ul>li .sub::before {
-        content: "";
-        position: absolute;
-
-        left: 14.5%;
-        top: 100px;
-        min-height: 650px;
-        max-height: 1500px;
-        height: auto;
-        width: 45%;
+        height: 90vh;
+        width: 500px;
         background: #fff;
-        border-radius: 50px;
+        z-index: -1;
+        visibility: visible;
+        border-radius: 0 0 0 50px;
 
-        font-size: 16px;
+    }
+
+    .header .gnb>ul>li:hover .sub {
+        display: none;
+    }
+
+    .header .gnb>ul>li .sub>li>ul {
+        position: static;
+
+        top: 0px;
+        height: auto;
+        max-width: 0;
+        width: 0;
+        margin: 0 0 0 0;
+        line-height: 1;
+
+        font-size: 14px;
         color: #000;
-        display: flex;
+        display: none;
+        flex-wrap: wrap;
+        opacity: 1;
         z-index: 1;
         visibility: visible;
 
     }
 
     .header .gnb>ul>li .sub>li {
-        margin: 0 15px 15px 0;
-
-        width: 300px;
-
-
+        max-width: 300px;
+        width: 200px;
+        margin: 0 15px;
     }
 
-    .header .gnb>ul>li .sub>li>a {
-        display: block;
-        padding: 15px 10px 15px 10px;
-        margin: 0 0 5px 0;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-    }
 
-    .header .gnb>ul>li .sub>li>ul>li {
-        padding: 0 0 0 10px;
-        line-height: 32px;
-    }
 
 
     .header .header_wrap .icon {
@@ -1356,10 +1404,16 @@ body {
     }
 
     .header .menu {
+        display: block;
+        position: fixed;
+        right: 15px;
+
+
         font-size: 20px;
         padding: 6px;
         background: #333;
         border-radius: 10px;
+        z-index: 1000;
 
     }
 
@@ -1532,6 +1586,7 @@ body {
         top: 0;
         right: 0;
         padding: 0 15px 0 0;
+        z-index: 999;
     }
 
     .mainservice .sv_tap .middel .tap_menu li {
@@ -2029,7 +2084,7 @@ body {
         background: #203a91;
         border-radius: 10px;
         font-weight: 300;
-        z-index: 999;
+        z-index: 1;
         color: #fff;
         text-align: center;
         line-height: 30px;
@@ -2309,7 +2364,9 @@ body {
 
     .footer {
         border: none;
-        height: 400px;
+        min-height: 470px;
+        overflow: hidden;
+
 
 
     }
